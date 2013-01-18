@@ -1,0 +1,72 @@
+/* FANCY SLIDER */
+.fancy_thumbnail_slider_container {
+	height: 473px;  		/* fancy_thumbnail height + 50px(custom) for next/prev button */
+	position: relative;
+	width: 1080px;  		/* if fixedWidth is true count the width depending on the items dimension (my example = 5 * 211) */
+	overflow:hidden;		/* if fixedWidth important*/
+	opacity:0.2;
+	margin: 30px auto;
+	}
+
+.fancy_thumbnail {
+	width: 100%;
+	height: 423px; 			/* .inner-height * row amount */
+	position: absolute;  	/* important (relative or absolute) */
+	left: 0px;
+	top: 25px;
+	overflow:hidden;		/* optional */
+	}
+	
+.fancy_thumbnail li {
+	float: left;
+	margin: 0 1px 1px 0;
+	width: 210px; height: 140px;
+	/* IMPORTANT = don't add border*/
+	position: relative;
+	cursor: pointer;
+	}
+	
+.fancy_thumbnail li .inner {
+	width: 210px; height: 140px;
+	}
+	
+.fancy_thumbnail li .caption {
+	width: 210px; height: 140px;
+	position: absolute;
+	top: 0px; left: 0px;
+	display: none;
+	}
+	
+.fancy_thumbnail li .caption a {
+	display: block;
+	width: 210px; height: 140px;
+	}
+	
+	
+.fancy_thumbnail_next, .fancy_thumbnail_prev {
+	width: 51px;
+	height: 16px;
+	display:block;
+	margin: 0 auto;
+	text-indent: -9999px;
+	}
+	
+.fancy_thumbnail_next {
+	background: url(../img/down.png);
+	position: absolute;
+	bottom: 0px;
+	left: 502px;
+	}	
+	
+.fancy_thumbnail_prev {
+	background: url(../img/up.png);
+	position: absolute;
+	top: 0px;
+	left: 502px;
+	}
+	
+.fancy_thumbnail_next:hover, .fancy_thumbnail_prev:hover {
+	background-position: bottom left;
+	}
+
+.disable { display: none; }  /* if next/prev button disable */
